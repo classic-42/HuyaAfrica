@@ -11,12 +11,16 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { FloatingLogos } from "./floating-logos";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary py-24 sm:py-32 lg:py-40">
+      {/* 3D Floating Logos Background */}
+      <FloatingLogos />
+
       {/* Decorative Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
       </div>
 

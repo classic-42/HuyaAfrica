@@ -36,11 +36,21 @@ export function FloatingLogos() {
 
     // Logo positions and properties
     const logos = [
-        { x: "15%", y: "20%", size: 60, delay: 0, speed: 1.2 },
-        { x: "75%", y: "15%", size: 100, delay: 0.5, speed: 0.8 },
-        { x: "65%", y: "70%", size: 80, delay: 1, speed: 1 },
-        { x: "20%", y: "80%", size: 120, delay: 1.5, speed: 0.6 },
-        { x: "85%", y: "60%", size: 50, delay: 2, speed: 1.4 },
+        { x: "10%", y: "15%", size: 60, delay: 0, speed: 1.2 },
+        { x: "80%", y: "10%", size: 100, delay: 0.5, speed: 0.8 },
+        { x: "65%", y: "75%", size: 80, delay: 1, speed: 1 },
+        { x: "20%", y: "85%", size: 120, delay: 1.5, speed: 0.6 },
+        { x: "90%", y: "65%", size: 50, delay: 2, speed: 1.4 },
+        { x: "45%", y: "10%", size: 70, delay: 0.2, speed: 1.1 },
+        { x: "55%", y: "90%", size: 90, delay: 0.8, speed: 0.9 },
+        { x: "5%", y: "50%", size: 40, delay: 1.2, speed: 1.5 },
+        { x: "95%", y: "40%", size: 65, delay: 1.6, speed: 1.2 },
+        { x: "35%", y: "60%", size: 110, delay: 2.1, speed: 0.7 },
+        { x: "70%", y: "30%", size: 55, delay: 0.4, speed: 1.3 },
+        { x: "25%", y: "35%", size: 45, delay: 1.1, speed: 1.4 },
+        { x: "75%", y: "55%", size: 75, delay: 1.9, speed: 1.0 },
+        { x: "15%", y: "65%", size: 85, delay: 0.7, speed: 0.9 },
+        { x: "85%", y: "85%", size: 105, delay: 2.5, speed: 0.75 },
     ];
 
     if (windowSize.width === 0) return null;

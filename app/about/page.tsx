@@ -11,6 +11,7 @@
  */
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CTASection } from "@/components/cta-section";
@@ -55,6 +56,28 @@ const values = [
     description:
       "We approach challenges with creativity and leverage cutting-edge technology.",
     icon: Lightbulb,
+  },
+];
+
+// Team members data
+const team = [
+  {
+    name: "Chidubem Okafor",
+    role: "Founder & CEO",
+    bio: "A visionary leader with over 15 years of experience in the African tech ecosystem, dedicated to driving digital transformation.",
+    image: "/team/ceo.png",
+  },
+  {
+    name: "Sarah Mwangi",
+    role: "Co-Founder & Marketing Director",
+    bio: "A strategic marketing expert passionate about building brands that resonate and making technology accessible to all.",
+    image: "/team/marketing.png",
+  },
+  {
+    name: "Kofi Mensah",
+    role: "Chief Technical Officer",
+    bio: "An innovative architect of complex systems, leading our engineering team to build world-class digital solutions.",
+    image: "/team/cto.png",
   },
 ];
 
@@ -193,6 +216,49 @@ export default function AboutPage() {
                   <p className="mt-2 leading-relaxed text-muted-foreground">
                     {value.description}
                   </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership Team Section */}
+        <section className="bg-muted/30 py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                Our Leadership Team
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Meet the visionary minds behind HuyaAfrica Technologies.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-16 grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {team.map((member) => (
+                <div
+                  key={member.name}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-accent/50 hover:shadow-xl"
+                >
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h3 className="text-xl font-bold text-foreground">
+                      {member.name}
+                    </h3>
+                    <p className="mt-1 font-medium text-primary">
+                      {member.role}
+                    </p>
+                    <p className="mt-4 leading-relaxed text-muted-foreground">
+                      {member.bio}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

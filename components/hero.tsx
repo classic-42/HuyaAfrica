@@ -15,7 +15,7 @@ import { FloatingLogos } from "./floating-logos";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-primary py-24 sm:py-32 lg:py-40">
+    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40" style={{ background: "linear-gradient(135deg, #E6461B 0%, #A91642 50%, #5E0959 100%)" }}>
       {/* 3D Floating Logos Background */}
       <FloatingLogos />
 
@@ -29,11 +29,11 @@ export function Hero() {
           {/* Main Headline */}
           <h1 className="text-balance text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
             Designing a Better Tomorrow.{" "}
-            <span className="text-accent">TODAY!</span>
+            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">TODAY!</span>
           </h1>
 
           {/* Subheadline / Value Proposition */}
-          <p className="mt-6 text-pretty text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-white/90 sm:text-xl">
             HuyaAfrica Technologies is a dynamic IT company delivering innovative
             digital solutions across Africa and beyond. We transform ideas into
             impactful products that drive growth and success.

@@ -85,8 +85,9 @@ export function LiveBackground() {
 
             draw() {
                 if (!ctx) return;
-                // Increased visibility
-                ctx.fillStyle = "rgba(100, 149, 237, 0.8)";
+                // Randomized brand colors for particles
+                const brandColors = ["#E6461B", "#5E0959", "#A91642"];
+                ctx.fillStyle = brandColors[Math.floor(Math.random() * brandColors.length)];
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -120,8 +121,8 @@ export function LiveBackground() {
                     if (distance < connectionDistance) {
                         ctx.beginPath();
                         const opacity = 1 - distance / connectionDistance;
-                        // Increased line visibility
-                        ctx.strokeStyle = `rgba(100, 149, 237, ${opacity * 0.4})`;
+                        // Brand color: Magenta with opacity
+                        ctx.strokeStyle = `rgba(169, 22, 66, ${opacity * 0.4})`;
                         ctx.lineWidth = 1.2;
                         ctx.moveTo(particles[a].x, particles[a].y);
                         ctx.lineTo(particles[b].x, particles[b].y);

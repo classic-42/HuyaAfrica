@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ContactForm } from "@/components/contact-form";
+import { FloatingLogos } from "@/components/floating-logos";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 // Page-specific metadata for SEO
@@ -50,7 +51,8 @@ export default function ContactPage() {
       <Navbar />
       <main className="flex-1">
         {/* Page Hero Section */}
-        <section className="bg-primary py-20 sm:py-28">
+        <section className="relative bg-primary py-20 sm:py-28 overflow-hidden">
+          <FloatingLogos />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl">

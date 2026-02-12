@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { FloatingLogos } from "@/components/floating-logos";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
@@ -47,11 +46,24 @@ export function HeroSlideshow() {
     };
 
     return (
-        <section className="relative overflow-hidden bg-primary py-24 sm:py-32 lg:py-40">
-            {/* 3D Floating Logos Background */}
-            <FloatingLogos />
+        <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
+            {/* Video Background */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                >
+                    <source src="/intro.mp4" type="video/mp4" />
+                </video>
+                {/* Overlay to ensure text readability and brand color tint */}
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/30 via-brand-magenta/30 to-brand-purple/30 opacity-60" />
+            </div>
 
-            {/* Decorative Background Pattern Overlay (Optional, keeping consistent with original) */}
+            {/* Decorative Background Pattern Overlay */}
             <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
             </div>
@@ -71,13 +83,13 @@ export function HeroSlideshow() {
                                 className="flex flex-col items-center"
                             >
                                 {/* Main Headline */}
-                                <h1 className="text-balance text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+                                <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
                                     {slides[currentSlide].headline}{" "}
-                                    <span className="text-accent">{slides[currentSlide].highlight}</span>
+                                    <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">{slides[currentSlide].highlight}</span>
                                 </h1>
 
                                 {/* Subheadline / Value Proposition */}
-                                <p className="mt-6 text-pretty text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
+                                <p className="mt-6 text-pretty text-lg leading-relaxed text-white/90 sm:text-xl">
                                     {slides[currentSlide].description}
                                 </p>
                             </motion.div>
@@ -104,7 +116,7 @@ export function HeroSlideshow() {
                             asChild
                             size="lg"
                             variant="outline"
-                            className="w-full border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground sm:w-auto"
+                            className="w-full border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white sm:w-auto"
                         >
                             <Link href="/services">Our Services</Link>
                         </Button>

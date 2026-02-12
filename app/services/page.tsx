@@ -16,6 +16,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ServicesGallery } from "@/components/services-gallery";
+import { FloatingLogos } from "@/components/floating-logos";
 import {
   ArrowRight,
   Cloud,
@@ -115,7 +116,8 @@ export default function ServicesPage() {
       <Navbar />
       <main className="flex-1">
         {/* Page Hero Section */}
-        <section className="bg-primary py-20 sm:py-28">
+        <section className="relative bg-primary py-20 sm:py-28 overflow-hidden">
+          <FloatingLogos />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl">

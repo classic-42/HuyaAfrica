@@ -55,7 +55,7 @@ export function Navbar() {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:block">
-          <Button asChild>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white shadow-lg transition-all hover:shadow-primary/25">
             <Link href="/contact">Get in Touch</Link>
           </Button>
         </div>

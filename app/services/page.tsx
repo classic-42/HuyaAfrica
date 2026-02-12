@@ -15,6 +15,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import { ServicesGallery } from "@/components/services-gallery";
 import {
   ArrowRight,
   Cloud,
@@ -167,6 +168,9 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
+
+        {/* Services Gallery Section */}
+        <ServicesGallery />
 
         {/* Custom CTA Section */}
         <section className="bg-muted/30 py-20 sm:py-24">

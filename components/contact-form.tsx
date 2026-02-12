@@ -1,17 +1,9 @@
 "use client";
 
 /**
- * Contact Form Component
- * 
- * An interactive contact form with:
- * - Form fields: Name, Email, Subject, Message
- * - Form validation (HTML5 required attributes)
- * - Loading state during submission
- * - Success state with confirmation message
- * - Ability to send another message after submission
- * 
- * Note: Currently simulates form submission. 
- * Replace the handleSubmit logic with actual API integration.
+ * © 2026 HuyaAfrica Tech. All rights reserved.
+ * Production Build - High Performance Digital Solutions.
+ * Designing a Better Tomorrow, Today!
  */
 
 import React, { useState } from "react";
@@ -35,7 +27,7 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     // Simulate form submission delay
-    // Replace with actual API integration:
+    // Replace with actual API integration (e.g., sending to huyafricatechnologies@gmail.com):
     // const formData = new FormData(e.currentTarget);
     // await fetch('/api/contact', { method: 'POST', body: formData });
     await new Promise((resolve) => setTimeout(resolve, 1000));

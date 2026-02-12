@@ -1,16 +1,12 @@
 /**
- * Footer Component
- * 
- * A comprehensive footer with multiple sections:
- * - Brand column with logo and social links
- * - Company navigation links
- * - Services quick links
- * - Contact information
- * - Copyright notice
+ * © 2026 HuyaAfrica Tech. All rights reserved.
+ * Production Build - High Performance Digital Solutions.
+ * Designing a Better Tomorrow, Today!
  */
 
 import Link from "next/link";
 import { Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 
 // Footer navigation links configuration
 const footerLinks = {
@@ -43,14 +39,14 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <span className="text-lg font-bold text-primary-foreground">
-                  H
-                </span>
+              <div className="relative h-20 w-64 overflow-hidden rounded-lg">
+                <Image
+                  src="/logo.png"
+                  alt="HuyAfrica Technologies"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <span className="text-lg font-semibold tracking-tight text-foreground">
-                HuyAfrica
-              </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Designing a Better Tomorrow. TODAY! <br />
@@ -117,7 +113,7 @@ export function Footer() {
               Contact Us
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li>info@huyafrica.tech</li>
+              <li>huyafricatechnologies@gmail.com</li>
               <li>+263 78 782 1762</li>
               <li>Harare, Zimbabwe</li>
             </ul>

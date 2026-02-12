@@ -62,22 +62,22 @@ const values = [
 // Team members data
 const team = [
   {
-    name: "Chidubem Okafor",
+    name: "Kelvin Jukwa",
     role: "Founder & CEO",
     bio: "A visionary leader with over 15 years of experience in the African tech ecosystem, dedicated to driving digital transformation.",
-    image: "/team/ceo.png",
+    image: "/team/ceo.jpg",
   },
   {
-    name: "Sarah Mwangi",
+    name: "Dephine Kachare",
     role: "Co-Founder & Marketing Director",
     bio: "A strategic marketing expert passionate about building brands that resonate and making technology accessible to all.",
-    image: "/team/marketing.png",
+    image: "/team/marketing.jpg",
   },
   {
-    name: "Kofi Mensah",
+    name: "Asher Tatenda Mpaso",
     role: "Chief Technical Officer",
     bio: "An innovative architect of complex systems, leading our engineering team to build world-class digital solutions.",
-    image: "/team/cto.png",
+    image: "/team/cto.jpg",
   },
 ];
 

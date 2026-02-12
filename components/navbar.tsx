@@ -1,20 +1,16 @@
 "use client";
 
 /**
- * Navbar Component
- * 
- * A responsive navigation bar with mobile menu support.
- * Features:
- * - Sticky positioning with backdrop blur effect
- * - Desktop navigation links
- * - Mobile hamburger menu with slide-down animation
- * - Call-to-action button
+ * © 2026 HuyaAfrica Tech. All rights reserved.
+ * Production Build - High Performance Digital Solutions.
+ * Designing a Better Tomorrow, Today!
  */
 
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Navigation links configuration - easily extendable
 const navLinks = [
@@ -33,12 +29,15 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo & Brand */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground">H</span>
+          <div className="relative h-14 w-44 overflow-hidden rounded-lg">
+            <Image
+              src="/logo.png"
+              alt="HuyAfrica Technologies"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className="text-lg font-semibold tracking-tight text-foreground">
-            HuyaAfrica
-          </span>
         </Link>
 
         {/* Desktop Navigation Links */}

@@ -131,7 +131,7 @@ export function Footer() {
               Contact Us
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li>huyafricatechnologies@gmail.com</li>
+              <li>info@huyafricatechnologies.co.zw</li>
               <li>+263 78 782 1762</li>
               <li>Harare, Zimbabwe</li>
             </ul>

@@ -27,7 +27,7 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     // Simulate form submission delay
-    // Replace with actual API integration (e.g., sending to huyafricatechnologies@gmail.com):
+    // Replace with actual API integration (e.g., sending to info@huyafricatechnologies.co.zw):
     // const formData = new FormData(e.currentTarget);
     // await fetch('/api/contact', { method: 'POST', body: formData });
     await new Promise((resolve) => setTimeout(resolve, 1000));

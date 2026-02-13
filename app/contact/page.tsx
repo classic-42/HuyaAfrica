@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "huyafricatechnologies@gmail.com",
-    href: "mailto:huyafricatechnologies@gmail.com",
+    value: "info@huyafricatechnologies.co.zw",
+    href: "mailto:info@huyafricatechnologies.co.zw",
   },
   {
     icon: Phone,

@@ -10,6 +10,7 @@ import { HeroSlideshow } from "@/components/hero-slideshow";
 import { Features } from "@/components/features";
 import { CTASection } from "@/components/cta-section";
 import { ProjectShowcase } from "@/components/project-showcase";
+import { LogoSection } from "@/components/logo-section";
 import { Suspense } from "react";
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Suspense fallback={null}>
           <ProjectShowcase />
         </Suspense>
+        <LogoSection />
         <CTASection />
       </main>
       <Footer />

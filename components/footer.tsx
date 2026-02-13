@@ -5,7 +5,7 @@
  */
 
 import Link from "next/link";
-import { Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 
 // Footer navigation links configuration
@@ -26,9 +26,8 @@ const footerLinks = {
 // Social media links - replace # with actual URLs
 const socialLinks = [
   { href: "#", icon: Linkedin, label: "LinkedIn" },
-  { href: "#", icon: Twitter, label: "Twitter" },
-  { href: "#", icon: Facebook, label: "Facebook" },
-  { href: "#", icon: Instagram, label: "Instagram" },
+  { href: "https://www.facebook.com/share/1DnhKgo3BQ/", icon: Facebook, label: "Facebook" },
+  { href: "https://www.instagram.com/huyafrica_technologies?igsh=MTdmZ2E0OHZ2bDh5bA==", icon: Instagram, label: "Instagram" },
 ];
 
 export function Footer() {
@@ -55,16 +54,35 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="mt-6 flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="text-muted-foreground transition-colors hover:text-foreground"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const isLink = social.href !== "#";
+                const content = <social.icon className="h-5 w-5" />;
+
+                if (isLink) {
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      className="text-muted-foreground transition-colors hover:text-foreground"
+                      aria-label={social.label}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {content}
+                    </a>
+                  );
+                }
+
+                return (
+                  <div
+                    key={social.label}
+                    className="text-muted-foreground/50 transition-colors"
+                    aria-label={social.label}
+                  >
+                    {content}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

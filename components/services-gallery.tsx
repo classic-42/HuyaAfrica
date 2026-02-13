@@ -52,14 +52,14 @@ const galleryItems = [
         id: "data-analytics",
         title: "Data Analytics Dashboard",
         category: "Data Science",
-        image: "https://images.unsplash.com/photo-1551288049-bb7211404c45?q=80&w=2340&auto=format&fit=crop",
+        image: "/images/gallery/Data Science.jpg",
         width: "col-span-1",
     },
     {
         id: "healthcare-system",
         title: "Healthcare Management",
         category: "Enterprise",
-        image: "https://images.unsplash.com/photo-1504813184591-01592f259ee2?q=80&w=2340&auto=format&fit=crop",
+        image: "/images/gallery/healthcare management.jpg",
         width: "col-span-1 md:col-span-2",
     },
     {

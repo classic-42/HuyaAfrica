@@ -85,9 +85,13 @@ export function LiveBackground() {
 
             draw() {
                 if (!ctx) return;
-                // Randomized brand colors for particles
-                const brandColors = ["#E6461B", "#5E0959", "#A91642"];
-                ctx.fillStyle = brandColors[Math.floor(Math.random() * brandColors.length)];
+                // Randomized brand colors for particles - pulling from CSS variables
+                const brandColors = [
+                    getComputedStyle(document.documentElement).getPropertyValue('--brand-orange').trim(),
+                    getComputedStyle(document.documentElement).getPropertyValue('--brand-purple').trim(),
+                    getComputedStyle(document.documentElement).getPropertyValue('--brand-magenta').trim()
+                ];
+                ctx.fillStyle = brandColors[Math.floor(Math.random() * brandColors.length)] || "#A91642";
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -112,6 +116,8 @@ export function LiveBackground() {
             });
 
             // Draw connections
+            const magentaColor = getComputedStyle(document.documentElement).getPropertyValue('--brand-magenta').trim() || "#A91642";
+
             for (let a = 0; a < particles.length; a++) {
                 for (let b = a; b < particles.length; b++) {
                     const dx = particles[a].x - particles[b].x;
@@ -122,7 +128,7 @@ export function LiveBackground() {
                         ctx.beginPath();
                         const opacity = 1 - distance / connectionDistance;
                         // Brand color: Magenta with opacity
-                        ctx.strokeStyle = `rgba(169, 22, 66, ${opacity * 0.4})`;
+                        ctx.strokeStyle = `rgba(169, 22, 66, ${opacity * 0.4})`; // Keeping the RGBA for smooth opacity transition, but referencing the color intent
                         ctx.lineWidth = 1.2;
                         ctx.moveTo(particles[a].x, particles[a].y);
                         ctx.lineTo(particles[b].x, particles[b].y);

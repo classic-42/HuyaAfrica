@@ -15,7 +15,7 @@ import { FloatingLogos } from "./floating-logos";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40" style={{ background: "linear-gradient(135deg, #E6461B 0%, #A91642 50%, #5E0959 100%)" }}>
+    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40" style={{ background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-magenta) 50%, var(--brand-purple) 100%)" }}>
       {/* 3D Floating Logos Background */}
       <FloatingLogos />
 

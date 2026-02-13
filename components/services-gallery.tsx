@@ -10,71 +10,70 @@ const galleryItems = [
         id: "enterprise-software",
         title: "Enterprise Software",
         category: "Development",
-        image: "/images/gallery/software-dev.png",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
         width: "col-span-1 md:col-span-2",
     },
     {
         id: "mobile-experiences",
         title: "Mobile Experiences",
         category: "App Design",
-        image: "/images/gallery/mobile-design.jpg",
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1",
     },
     {
         id: "cloud-infrastructure",
         title: "Cloud Infrastructure",
         category: "DevOps",
-        image: "/images/gallery/cloud.jpeg",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2344&auto=format&fit=crop",
         width: "col-span-1",
     },
     {
         id: "strategic-consulting",
         title: "Strategic Consulting",
         category: "IT Strategy",
-        image: "/images/gallery/consulting.png",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1 md:col-span-2",
     },
-    // New Items
     {
         id: "e-commerce-platform",
         title: "E-Commerce Platform",
         category: "Web Development",
-        image: "/images/gallery/software-dev.png", // Reusing image
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1",
     },
     {
         id: "fintech-app",
         title: "Fintech Mobile App",
         category: "App Development",
-        image: "/images/gallery/mobile-design.jpg", // Reusing image
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1",
     },
     {
         id: "data-analytics",
         title: "Data Analytics Dashboard",
         category: "Data Science",
-        image: "/images/gallery/cloud.jpeg", // Reusing image
+        image: "https://images.unsplash.com/photo-1551288049-bb7211404c45?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1",
     },
     {
         id: "healthcare-system",
         title: "Healthcare Management",
         category: "Enterprise",
-        image: "/images/gallery/consulting.png", // Reusing image
+        image: "https://images.unsplash.com/photo-1504813184591-01592f259ee2?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1 md:col-span-2",
     },
     {
         id: "iot-solution",
         title: "IoT Smart Home",
         category: "IoT",
-        image: "/images/gallery/software-dev.png", // Reusing image
+        image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1 md:col-span-2",
     },
     {
         id: "cybersecurity-audit",
         title: "Cybersecurity Audit",
         category: "Security",
-        image: "/images/gallery/cloud.jpeg", // Reusing image
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2340&auto=format&fit=crop",
         width: "col-span-1",
     },
 ];

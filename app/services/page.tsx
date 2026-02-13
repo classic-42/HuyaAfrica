@@ -1,14 +1,4 @@
-/**
- * Services Page
- * 
- * Displays the full range of IT services offered by HuyaAfrica Technologies.
- * Features:
- * - Service cards with icons, descriptions, and feature lists
- * - Responsive grid layout
- * - Custom CTA section for consultations
- * 
- * @route /services
- */
+
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -27,14 +17,12 @@ import {
   Settings,
 } from "lucide-react";
 
-// Page-specific metadata for SEO
 export const metadata: Metadata = {
   title: "Services | HuyaAfrica Technologies",
   description:
     "Explore our comprehensive IT services including software development, web & mobile solutions, IT consulting, digital transformation, and cloud solutions.",
 };
 
-// Services data - each service includes name, description, icon, and feature list
 const services = [
   {
     name: "Software Development",
@@ -115,7 +103,6 @@ export default function ServicesPage() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Page Hero Section */}
         <section className="relative bg-primary py-20 sm:py-28 overflow-hidden">
           <FloatingLogos />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -131,7 +118,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services Grid Section */}
         <section className="bg-background py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -140,12 +126,10 @@ export default function ServicesPage() {
                   key={service.name}
                   className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-accent/50 hover:shadow-lg"
                 >
-                  {/* Service Icon */}
                   <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                     <service.icon className="h-7 w-7 text-primary" />
                   </div>
 
-                  {/* Service Title & Description */}
                   <h3 className="mt-6 text-xl font-semibold text-foreground">
                     {service.name}
                   </h3>
@@ -153,7 +137,6 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
 
-                  {/* Feature List */}
                   <ul className="mt-6 space-y-2">
                     {service.features.map((feature) => (
                       <li
@@ -171,10 +154,8 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services Gallery Section */}
         <ServicesGallery />
 
-        {/* Custom CTA Section */}
         <section className="bg-muted/30 py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">

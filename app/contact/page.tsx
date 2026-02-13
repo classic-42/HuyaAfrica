@@ -1,13 +1,4 @@
-/**
- * Contact Page
- * 
- * Provides multiple ways to get in touch with HuyaAfrica Technologies:
- * - Contact information (email, phone, location)
- * - Interactive contact form
- * - Embedded Google Maps location
- * 
- * @route /contact
- */
+
 
 import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
@@ -16,14 +7,12 @@ import { ContactForm } from "@/components/contact-form";
 import { FloatingLogos } from "@/components/floating-logos";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-// Page-specific metadata for SEO
 export const metadata: Metadata = {
   title: "Contact Us | HuyaAfrica Technologies",
   description:
     "Get in touch with HuyaAfrica Technologies. We are here to discuss your digital transformation needs and help bring your ideas to life.",
 };
 
-// Contact information data
 const contactInfo = [
   {
     icon: Mail,
@@ -50,7 +39,6 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Page Hero Section */}
         <section className="relative bg-primary py-20 sm:py-28 overflow-hidden">
           <FloatingLogos />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -65,11 +53,9 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section className="bg-background py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-5 lg:gap-16">
-              {/* Contact Information Column */}
               <div className="lg:col-span-2">
                 <h2 className="text-2xl font-bold tracking-tight text-foreground">
                   Contact Information
@@ -79,7 +65,6 @@ export default function ContactPage() {
                   team is ready to assist you with your digital needs.
                 </p>
 
-                {/* Contact Info Cards */}
                 <div className="mt-8 space-y-6">
                   {contactInfo.map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
@@ -105,7 +90,6 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                {/* Embedded Google Maps */}
                 <div className="mt-10 aspect-video overflow-hidden rounded-2xl border border-border bg-muted">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121516.32688002633!2d31.02641795!3d-17.82485825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e706b17161%3A0xaec014b29598a3e!2sHarare!5e0!3m2!1sen!2szw!4v1710000000000"
@@ -120,7 +104,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Contact Form Column */}
               <div className="lg:col-span-3">
                 <h2 className="text-2xl font-bold tracking-tight text-foreground">
                   Send Us a Message

@@ -8,7 +8,6 @@ export function FloatingLogos() {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    // Smooth springs for cursor following
     const springConfig = { damping: 25, stiffness: 150 };
     const smoothX = useSpring(mouseX, springConfig);
     const smoothY = useSpring(mouseY, springConfig);
@@ -19,7 +18,6 @@ export function FloatingLogos() {
         };
 
         const handleMouseMove = (e: MouseEvent) => {
-            // Normalize mouse position from -0.5 to 0.5
             mouseX.set(e.clientX / window.innerWidth - 0.5);
             mouseY.set(e.clientY / window.innerHeight - 0.5);
         };
@@ -34,7 +32,6 @@ export function FloatingLogos() {
         };
     }, [mouseX, mouseY]);
 
-    // Logo positions and properties
     const logos = [
         { x: "10%", y: "15%", size: 60, delay: 0, speed: 1.2 },
         { x: "80%", y: "10%", size: 100, delay: 0.5, speed: 0.8 },
@@ -70,7 +67,6 @@ export function FloatingLogos() {
 }
 
 function LogoItem({ logo, smoothX, smoothY }: { logo: any, smoothX: any, smoothY: any }) {
-    // Parallax calculations
     const translateX = useTransform(smoothX, [-0.5, 0.5], [logo.size * -0.5, logo.size * 0.5]);
     const translateY = useTransform(smoothY, [-0.5, 0.5], [logo.size * -0.5, logo.size * 0.5]);
     const rotateX = useTransform(smoothY, [-0.5, 0.5], [20, -20]);

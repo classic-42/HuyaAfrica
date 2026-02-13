@@ -1,9 +1,3 @@
-/**
- * © 2026 HuyaAfrica Tech. All rights reserved.
- * Production Build - High Performance Digital Solutions.
- * Designing a Better Tomorrow, Today!
- */
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { HeroSlideshow } from "@/components/hero-slideshow";

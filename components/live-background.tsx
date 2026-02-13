@@ -14,11 +14,10 @@ export function LiveBackground() {
 
         let animationFrameId: number;
         let particles: Particle[] = [];
-        const particleCount = 50; // Slightly fewer particles for cleaner look with larger size
-        const connectionDistance = 200; // Increased connection distance
-        const mouseParams = { x: 0, y: 0, radius: 250 }; // Increased interaction radius
+        const particleCount = 50;
+        const connectionDistance = 200;
+        const mouseParams = { x: 0, y: 0, radius: 250 };
 
-        // Resize canvas
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -27,7 +26,6 @@ export function LiveBackground() {
         window.addEventListener("resize", resizeCanvas);
         resizeCanvas();
 
-        // Mouse interaction
         const handleMouseMove = (e: MouseEvent) => {
             const rect = canvas.getBoundingClientRect();
             mouseParams.x = e.clientX - rect.left;
@@ -45,10 +43,8 @@ export function LiveBackground() {
             constructor() {
                 this.x = Math.random() * canvas!.width;
                 this.y = Math.random() * canvas!.height;
-                // Slower velocity
                 this.vx = (Math.random() - 0.5) * 0.4;
                 this.vy = (Math.random() - 0.5) * 0.4;
-                // Larger size
                 this.size = Math.random() * 3 + 2;
             }
 
@@ -56,11 +52,9 @@ export function LiveBackground() {
                 this.x += this.vx;
                 this.y += this.vy;
 
-                // Bounce off edges with damping
                 if (this.x < 0 || this.x > canvas!.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas!.height) this.vy *= -1;
 
-                // Mouse interaction - varying behavior relative to cursor
                 const dx = mouseParams.x - this.x;
                 const dy = mouseParams.y - this.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
@@ -70,14 +64,12 @@ export function LiveBackground() {
                     const forceDirectionY = dy / distance;
                     const maxDistance = mouseParams.radius;
                     const force = (maxDistance - distance) / maxDistance;
-                    // Move away from cursor (repulsion) smoothly
                     const directionX = forceDirectionX * force * 1.5;
                     const directionY = forceDirectionY * force * 1.5;
 
                     this.vx -= directionX * 0.05;
                     this.vy -= directionY * 0.05;
                 } else {
-                    // Gradual slow down if they were pushed too hard
                     if (Math.abs(this.vx) > 0.4) this.vx *= 0.99;
                     if (Math.abs(this.vy) > 0.4) this.vy *= 0.99;
                 }
@@ -85,7 +77,6 @@ export function LiveBackground() {
 
             draw() {
                 if (!ctx) return;
-                // Randomized brand colors for particles - pulling from CSS variables
                 const brandColors = [
                     getComputedStyle(document.documentElement).getPropertyValue('--brand-orange').trim(),
                     getComputedStyle(document.documentElement).getPropertyValue('--brand-purple').trim(),
@@ -107,15 +98,13 @@ export function LiveBackground() {
 
         const animate = () => {
             if (!ctx) return;
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Standard clear
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Update and draw particles
             particles.forEach((particle) => {
                 particle.update();
                 particle.draw();
             });
 
-            // Draw connections
             const magentaColor = getComputedStyle(document.documentElement).getPropertyValue('--brand-magenta').trim() || "#A91642";
 
             for (let a = 0; a < particles.length; a++) {
@@ -127,7 +116,6 @@ export function LiveBackground() {
                     if (distance < connectionDistance) {
                         ctx.beginPath();
                         const opacity = 1 - distance / connectionDistance;
-                        // Brand color: Magenta with opacity
                         ctx.strokeStyle = `rgba(169, 22, 66, ${opacity * 0.4})`; // Keeping the RGBA for smooth opacity transition, but referencing the color intent
                         ctx.lineWidth = 1.2;
                         ctx.moveTo(particles[a].x, particles[a].y);

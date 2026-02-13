@@ -1,9 +1,3 @@
-/**
- * © 2026 HuyaAfrica Tech. All rights reserved.
- * Production Build - High Performance Digital Solutions.
- * Designing a Better Tomorrow, Today!
- */
-
 import React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -11,11 +5,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { LiveBackground } from "@/components/live-background";
 import "./globals.css";
 
-// Font configuration
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-// Global SEO metadata
 export const metadata: Metadata = {
   title: "HuyaAfrica Technologies | Designing a Better Tomorrow. TODAY!",
   description:

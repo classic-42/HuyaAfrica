@@ -9,8 +9,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-// This should match the data in ServicesGallery for consistency, 
-// or be a superset of it.
+
 const projects = [
     {
         id: "enterprise-software",
@@ -115,7 +114,6 @@ export function ProjectShowcase() {
 
     const closeShowcase = () => {
         setIsOpen(false);
-        // Ideally update URL to remove param without reload, but simpler here:
         window.history.pushState({}, "", "/");
     };
 
@@ -147,7 +145,6 @@ export function ProjectShowcase() {
                                     className="relative min-w-0 flex-[0_0_100%]"
                                 >
                                     <div className="grid h-[80vh] grid-cols-1 md:grid-cols-2">
-                                        {/* Image Section */}
                                         <div className="relative h-1/2 w-full md:h-full">
                                             <Image
                                                 src={project.image}
@@ -158,7 +155,6 @@ export function ProjectShowcase() {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r" />
                                         </div>
 
-                                        {/* Content Section */}
                                         <div className="flex h-1/2 flex-coljustify-center p-8 md:h-full md:p-12 lg:p-16">
                                             <div className="flex flex-col justify-center h-full space-y-6">
                                                 <div className="flex flex-wrap gap-2">
@@ -191,7 +187,6 @@ export function ProjectShowcase() {
                         </div>
                     </div>
 
-                    {/* Navigation Buttons */}
                     <Button
                         variant="outline"
                         size="icon"

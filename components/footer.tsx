@@ -1,14 +1,9 @@
-/**
- * © 2026 HuyaAfrica Tech. All rights reserved.
- * Production Build - High Performance Digital Solutions.
- * Designing a Better Tomorrow, Today!
- */
+
 
 import Link from "next/link";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 
-// Footer navigation links configuration
 const footerLinks = {
   company: [
     { href: "/about", label: "About Us" },
@@ -23,7 +18,6 @@ const footerLinks = {
   ],
 };
 
-// Social media links - replace # with actual URLs
 const socialLinks = [
   { href: "#", icon: Linkedin, label: "LinkedIn" },
   { href: "https://www.facebook.com/share/1DnhKgo3BQ/", icon: Facebook, label: "Facebook" },
@@ -35,7 +29,6 @@ export function Footer() {
     <footer className="border-t-2 border-accent/20 bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-4">
-          {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <div className="relative h-20 w-64 overflow-hidden rounded-lg">
@@ -52,7 +45,6 @@ export function Footer() {
               Innovative digital solutions across Africa and beyond.
             </p>
 
-            {/* Social Links */}
             <div className="mt-6 flex gap-4">
               {socialLinks.map((social) => {
                 const isLink = social.href !== "#";
@@ -86,9 +78,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Links Columns */}
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-2 lg:ml-auto">
-            {/* Company Links */}
             <div>
               <h3 className="text-sm font-semibold text-foreground">Company</h3>
               <ul className="mt-4 space-y-3">
@@ -105,7 +95,6 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Services Links */}
             <div>
               <h3 className="text-sm font-semibold text-foreground">
                 Services
@@ -125,7 +114,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact Information Column */}
           <div className="lg:col-span-1">
             <h3 className="text-sm font-semibold text-foreground">
               Contact Us
@@ -138,7 +126,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright Notice */}
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} HuyaAfrica Technologies. All rights

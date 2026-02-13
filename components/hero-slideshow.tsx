@@ -33,7 +33,7 @@ export function HeroSlideshow() {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 6000); // Change slide every 6 seconds
+        }, 6000);
         return () => clearInterval(timer);
     }, []);
 
@@ -47,7 +47,6 @@ export function HeroSlideshow() {
 
     return (
         <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
-            {/* Video Background */}
             <div className="absolute inset-0 z-0">
                 <video
                     autoPlay
@@ -58,12 +57,10 @@ export function HeroSlideshow() {
                 >
                     <source src="/intro.mp4" type="video/mp4" />
                 </video>
-                {/* Overlay to ensure text readability and brand color tint */}
                 <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/30 via-brand-magenta/30 to-brand-purple/30 opacity-60" />
             </div>
 
-            {/* Decorative Background Pattern Overlay */}
             <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
             </div>
@@ -72,7 +69,7 @@ export function HeroSlideshow() {
             <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-3xl text-center">
 
-                    <div className="relative min-h-[300px]"> {/* Container to prevent layout shift */}
+                    <div className="relative min-h-[300px]">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentSlide}
@@ -82,13 +79,11 @@ export function HeroSlideshow() {
                                 transition={{ duration: 0.5 }}
                                 className="flex flex-col items-center"
                             >
-                                {/* Main Headline */}
                                 <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
                                     {slides[currentSlide].headline}{" "}
                                     <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">{slides[currentSlide].highlight}</span>
                                 </h1>
 
-                                {/* Subheadline / Value Proposition */}
                                 <p className="mt-6 text-pretty text-lg leading-relaxed text-white/90 sm:text-xl">
                                     {slides[currentSlide].description}
                                 </p>
@@ -96,9 +91,7 @@ export function HeroSlideshow() {
                         </AnimatePresence>
                     </div>
 
-                    {/* Call-to-Action Buttons */}
                     <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        {/* Primary CTA */}
                         <Button
                             asChild
                             size="lg"
@@ -111,7 +104,6 @@ export function HeroSlideshow() {
                             </Link>
                         </Button>
 
-                        {/* Secondary CTA */}
                         <Button
                             asChild
                             size="lg"
@@ -122,7 +114,6 @@ export function HeroSlideshow() {
                         </Button>
                     </div>
 
-                    {/* Slide Navigation Dots */}
                     <div className="mt-12 flex justify-center gap-2">
                         {slides.map((_, index) => (
                             <button

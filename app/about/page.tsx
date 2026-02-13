@@ -1,14 +1,4 @@
-/**
- * About Us Page
- * 
- * Showcases company information including:
- * - Company overview and history
- * - Key statistics and achievements
- * - Mission statement
- * - Core values
- * 
- * @route /about
- */
+
 
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -25,14 +15,12 @@ import {
   Users,
 } from "lucide-react";
 
-// Page-specific metadata for SEO
 export const metadata: Metadata = {
   title: "About Us | HuyaAfrica Technologies",
   description:
     "Learn about HuyaAfrica Technologies - a dynamic IT company delivering innovative digital solutions across Africa and beyond.",
 };
 
-// Core values data - displayed in grid format
 const values = [
   {
     name: "Quality & Reliability",
@@ -60,7 +48,6 @@ const values = [
   },
 ];
 
-// Team members data
 const team = [
   {
     name: "Kelvin Jukwa",
@@ -87,7 +74,6 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Page Hero Section */}
         <section className="relative bg-primary py-20 sm:py-28 overflow-hidden">
           <FloatingLogos />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -103,11 +89,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Company Overview Section */}
         <section className="bg-background py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-2 lg:gap-16">
-              {/* Who We Are Content */}
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-foreground">
                   Who We Are
@@ -128,7 +112,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Statistics Grid */}
               <div className="flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center">
@@ -173,7 +156,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission Statement Section */}
         <section className="bg-muted/30 py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
@@ -189,7 +171,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Core Values Section */}
         <section className="bg-background py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
@@ -202,7 +183,6 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Values Grid */}
             <div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2">
               {values.map((value) => (
                 <div
@@ -224,7 +204,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership Team Section */}
         <section className="bg-muted/30 py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">

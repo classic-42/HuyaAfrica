@@ -1,9 +1,4 @@
-/**
- * Logo Section Component
- * 
- * Displays a curated list of logos of companies worked with.
- * Features a smooth infinite horizontal scroll (marquee) effect.
- */
+
 
 "use client";
 
@@ -22,7 +17,6 @@ const logos = [
     { src: "/logos/Screenshot 2026-02-13 100449.png", alt: "Client Logo" },
 ];
 
-// Double the logos for infinite scroll effect
 const allLogos = [...logos, ...logos];
 
 export function LogoSection() {
@@ -73,7 +67,6 @@ export function LogoSection() {
                 </div>
             </div>
 
-            {/* Gradient overlays for smooth fading at edges */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent pointer-events-none"></div>
 

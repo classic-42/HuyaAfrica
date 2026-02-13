@@ -19,6 +19,7 @@ const logos = [
     { src: "/logos/WhatsApp Image 2026-02-13 at 08.16.54.jpeg", alt: "Client Logo" },
     { src: "/logos/WhatsApp Image 2026-02-13 at 08.17.28.jpeg", alt: "Partner Logo" },
     { src: "/logos/cloud.jpeg", alt: "Cloud Technology Partner" },
+    { src: "/logos/Screenshot 2026-02-13 100449.png", alt: "Client Logo" },
 ];
 
 // Double the logos for infinite scroll effect

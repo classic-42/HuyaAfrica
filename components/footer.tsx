@@ -41,7 +41,7 @@ export function Footer() {
               <div className="relative h-20 w-64 overflow-hidden rounded-lg">
                 <Image
                   src="/logo.png"
-                  alt="HuyAfrica Technologies"
+                  alt="HuyaAfrica Technologies"
                   fill
                   className="object-contain"
                 />
@@ -141,7 +141,7 @@ export function Footer() {
         {/* Copyright Notice */}
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} HuyAfrica Technologies. All rights
+            &copy; {new Date().getFullYear()} HuyaAfrica Technologies. All rights
             reserved.
           </p>
         </div>

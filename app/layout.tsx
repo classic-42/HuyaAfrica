@@ -17,9 +17,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 // Global SEO metadata
 export const metadata: Metadata = {
-  title: "HuyAfrica Technologies | Designing a Better Tomorrow. TODAY!",
+  title: "HuyaAfrica Technologies | Designing a Better Tomorrow. TODAY!",
   description:
-    "HuyAfrica Technologies is a dynamic IT company delivering innovative digital solutions across Africa and beyond. Software development, web & mobile solutions, IT consulting, and digital transformation.",
+    "HuyaAfrica Technologies is a dynamic IT company delivering innovative digital solutions across Africa and beyond. Software development, web & mobile solutions, IT consulting, and digital transformation.",
   generator: "v0.app",
   icons: {
     icon: "/logo.png",

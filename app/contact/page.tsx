@@ -1,7 +1,7 @@
 /**
  * Contact Page
  * 
- * Provides multiple ways to get in touch with HuyAfrica Technologies:
+ * Provides multiple ways to get in touch with HuyaAfrica Technologies:
  * - Contact information (email, phone, location)
  * - Interactive contact form
  * - Embedded Google Maps location
@@ -18,9 +18,9 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 // Page-specific metadata for SEO
 export const metadata: Metadata = {
-  title: "Contact Us | HuyAfrica Technologies",
+  title: "Contact Us | HuyaAfrica Technologies",
   description:
-    "Get in touch with HuyAfrica Technologies. We are here to discuss your digital transformation needs and help bring your ideas to life.",
+    "Get in touch with HuyaAfrica Technologies. We are here to discuss your digital transformation needs and help bring your ideas to life.",
 };
 
 // Contact information data
@@ -115,7 +115,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="HuyAfrica Technologies Location"
+                    title="HuyaAfrica Technologies Location"
                   />
                 </div>
               </div>

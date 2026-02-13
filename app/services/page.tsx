@@ -1,7 +1,7 @@
 /**
  * Services Page
  * 
- * Displays the full range of IT services offered by HuyAfrica Technologies.
+ * Displays the full range of IT services offered by HuyaAfrica Technologies.
  * Features:
  * - Service cards with icons, descriptions, and feature lists
  * - Responsive grid layout

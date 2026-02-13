@@ -32,7 +32,7 @@ export function Navbar() {
           <div className="relative h-14 w-44 overflow-hidden rounded-lg">
             <Image
               src="/logo.png"
-              alt="HuyAfrica Technologies"
+              alt="HuyaAfrica Technologies"
               fill
               className="object-contain"
               priority
